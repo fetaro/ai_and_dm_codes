@@ -1,0 +1,3 @@
+```sql
+create database test;
+```
