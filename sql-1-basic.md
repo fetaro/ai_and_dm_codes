@@ -20,3 +20,9 @@ create table user (
 insert into test.user values(1,"Tetsutaro Watanabe","fetaro@hoge.com","M",35,"1420042")
 ```
 
+
+
+## サンプルデータのロード
+
+データのダウンロード：　https://drive.google.com/file/d/1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id/view?usp=sharing
+
