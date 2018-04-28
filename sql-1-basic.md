@@ -1,7 +1,12 @@
+## RDBとSQLの基本
+
 ### はじめに
 
 * 大文字と小文字は区別しない
-* 
+* 右側のページにSQLを書く
+  * 稲妻マークを押すとページ全体が実行される
+  * 稲島+1マークを押すと、選択した箇所を含むセクション「;」までが実行される
+* 作成したデータは、左上のSCHEMASのところに表示される。
 
 ### スキーマを作る
 
@@ -24,8 +29,8 @@ USE test ;
 
 ```sql
 CREATE TABLE user (
-  id INT PRIMARY KEY, 
-  name VARCHAR(20), 
+  id INT PRIMARY KEY, 
+  name VARCHAR(20), 
   sex VARCHAR(1),
   age INT, 
   zip VARCHAR(7)
@@ -63,6 +68,8 @@ SELECT name,age FROM user;
 
 行の絞り込み
 
+
+
 ```sql
 SELECT * FROM user WHERE id = 2; 
 ```
@@ -76,8 +83,47 @@ WHERE id = 1
 ;
 ```
 
+### データを削除する
 
-## サンプルデータのロード
+```sql
+DELETE user 
+WHERE id = 2
+;
+```
+
+```sql
+DELETE FROM user 
+WHERE id = 2
+;
+```
+
+### テーブルを消す
+
+```sql
+DROP TABLE user;
+```
+
+### 演習4-1
+
+* 先ほど作成したuserテーブルに、e-mailアドレスも格納できるようにした`user2`を作成せよ。
+* e-mailアドレスのデータ型は`文字列50文字`である。
+* 作成したテーブルに以下のデータを挿入せよ。
+
+```
+1,"Tetsutaro Watanabe","M",35,"1420042","fetaro@hoge.com";
+2,"Taro Yamada","M",30,"1420043","yamada@hoge.com";
+3,"Hanako Suzuki","F",28,"1420050","suzuki@hoge.com";
+```
+
+### 余談
+ちなみに、「hoge」という言葉はIT関係者が良く使う言葉であり、とりあえず適当な文字列を書きたいときに「hoge」とかく。
+「hoge」の他にも「bar」が良く使われる。
+
+## 集計の練習
+
+
+
+### サンプルデータのロード
 
 データのダウンロード：　https://drive.google.com/file/d/1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id/view?usp=sharing
 
