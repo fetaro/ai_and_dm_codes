@@ -85,7 +85,8 @@ SELECT COUNT(*) FROM user WHERE age < 30;
 ```
 
 値の最大を取得
-```
+
+```sql
 SELECT MAX(age) FROM user;
 ```
 
