@@ -240,7 +240,6 @@ pp.pprint(f_dict)
                                            'id': 802,
                                            'main': 'Clouds'}],
                         'wind': {'deg': 107.502, 'speed': 0.22}},
-                    ・・・
                     {   'clouds': {'all': 100},
                         'dt': 1525294800,
                         'dt_txt': '2018-05-02 21:00:00',
