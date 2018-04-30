@@ -1,4 +1,4 @@
-
+﻿
 ## 事前準備
 
 ### 気象情報APIのAPIキーの取得
@@ -78,7 +78,7 @@ print(response.text)
 ```
 
     {"coord":{"lon":139.76,"lat":35.68},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":290.15,"pressure":1019,"humidity":67,"temp_min":289.15,"temp_max":292.15},"visibility":16093,"wind":{"speed":2.1,"deg":50},"clouds":{"all":1},"dt":1524409020,"sys":{"type":1,"id":7622,"message":0.0082,"country":"JP","sunrise":1524340757,"sunset":1524388807},"id":1850147,"name":"Tokyo","cod":200}
-    
+
 
 ## JSONをディクショナリに変換して表示する
 
@@ -92,7 +92,7 @@ print(w_dict)
 ```
 
     {'coord': {'lon': 139.76, 'lat': 35.68}, 'weather': [{'id': 701, 'main': 'Mist', 'description': 'mist', 'icon': '50n'}], 'base': 'stations', 'main': {'temp': 290.15, 'pressure': 1019, 'humidity': 67, 'temp_min': 289.15, 'temp_max': 292.15}, 'visibility': 16093, 'wind': {'speed': 2.1, 'deg': 50}, 'clouds': {'all': 1}, 'dt': 1524409020, 'sys': {'type': 1, 'id': 7622, 'message': 0.0082, 'country': 'JP', 'sunrise': 1524340757, 'sunset': 1524388807}, 'id': 1850147, 'name': 'Tokyo', 'cod': 200}
-    
+
 
 ## ディクショナリをきれいに表示する
 
@@ -128,7 +128,7 @@ pp.pprint(w_dict)
                            'id': 701,
                            'main': 'Mist'}],
         'wind': {'deg': 50, 'speed': 2.1}}
-    
+
 
 ## 時刻を取得
 
@@ -140,7 +140,7 @@ print(unix_time)
 ```
 
     1524409020
-    
+
 
 ## UNIXタイムを日本時間で解釈して表示
 
@@ -154,7 +154,7 @@ print(time)
 ```
 
     2018-04-22 23:57:00+09:00
-    
+
 
 ## 課題 3-1
 
@@ -172,7 +172,7 @@ print(time)
 
 出力：4月24日火曜日12時の気温は13度、天気は曇り、風の強さは5.1m/sです。
 
-ヒント：天気の文字列の種類は　https://openweathermap.org/weather-conditions　を見る
+ヒント：天気の文字列の種類は　https://openweathermap.org/weather-conditions を見る
 
 ## 天気予報の取得
 
@@ -1008,3 +1008,4 @@ for w_dict in w_list:
 ```
 
 ヒント：ダブルクオート "  をprintしたいときは、文字列をシングルクオート ' で定義する。   print('ここは"大阪"です')
+

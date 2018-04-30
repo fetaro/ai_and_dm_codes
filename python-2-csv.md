@@ -89,9 +89,11 @@ with open(filename, "r") as file:
 ## 演習2-1
 以下のファイルの各行の先頭に"n行目:"という文字列を付けて表示せよ
 
+```
 1行目:apple
 2行目:orange
 3行目:banana
+```
 
 ヒント　enumerate()
 ## pythonのドキュメントを読む
