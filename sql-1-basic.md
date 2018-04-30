@@ -84,6 +84,14 @@ SELECT COUNT(*) FROM user;
 SELECT COUNT(*) FROM user WHERE age < 30;
 ```
 
+値の最大を取得
+```
+SELECT MAX(age) FROM user;
+```
+
+他にも　最小`MIN()`,平均 `AVG()`, 最大`SUM()`　などの関数がある。
+
+
 ### データを更新する
 
 ```sql
@@ -145,26 +153,13 @@ DROP TABLE user;
 
 集計・分析・機械学習・AI、何をするにしてもまずはデータを知ることが第一歩
 
-データについて色々調べてみる
+### 演習4-2
 
-どんなテーブルがある？
+employeesスキーマには、とある会社の社員、給与、所属部署の情報が入っている。
+データを見て以下の問いに答えよ。
 
-```
-USE employees;
-SHOW TABLES;
-```
+* 従業員の数は？
+* 従業員の男女の数は？
+* 給料の一番多い人の、給料、社員番号、名前は？
 
-employeesテーブルには何が入っている？
-
-```
-DESC employees;
-```
-
-従業員の数は？（employeesの行数は？）
-
-```
-SELECT COUNT(*) FROM employees;
-```
-
-### 
-
+ヒント：従業員はemployeesテーブル、給与はsalariesテーブルにある
