@@ -240,25 +240,7 @@ pp.pprint(f_dict)
                                            'id': 802,
                                            'main': 'Clouds'}],
                         'wind': {'deg': 107.502, 'speed': 0.22}},
-                    {   'clouds': {'all': 100},
-                        'dt': 1525294800,
-                        'dt_txt': '2018-05-02 21:00:00',
-                        'main': {   'grnd_level': 1016.53,
-                                    'humidity': 100,
-                                    'pressure': 1016.53,
-                                    'sea_level': 1020.45,
-                                    'temp': 290.15,
-                                    'temp_kf': 0,
-                                    'temp_max': 290.15,
-                                    'temp_min': 290.15},
-                        'rain': {'3h': 4.3725},
-                        'sys': {'pod': 'd'},
-                        'weather': [   {   'description': 'moderate rain',
-                                           'icon': '10d',
-                                           'id': 501,
-                                           'main': 'Rain'}],
-                        'wind': {'deg': 229.501, 'speed': 1.88}}],
-        'message': 0.0111}
+
     
 
 ## 気温だけを表示
