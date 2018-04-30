@@ -31,7 +31,7 @@ USE test ;
 CREATE TABLE user (
   id INT PRIMARY KEY, 
   name VARCHAR(20), 
-  sex VARCHAR(1),
+  gender VARCHAR(1),
   age INT, 
   zip VARCHAR(7)
 );
@@ -68,10 +68,20 @@ SELECT name,age FROM user;
 
 行の絞り込み
 
-
-
 ```sql
 SELECT * FROM user WHERE id = 2; 
+```
+
+件数の取得
+
+```sql
+SELECT COUNT(*) FROM user;
+```
+
+条件を指定した件数の絞り込み
+
+```sql
+SELECT COUNT(*) FROM user WHERE age < 30;
 ```
 
 ### データを更新する
@@ -121,9 +131,40 @@ DROP TABLE user;
 
 ## 集計の練習
 
-
-
 ### サンプルデータのロード
 
 データのダウンロード：　https://drive.google.com/file/d/1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id/view?usp=sharing
+
+### サンプルデータのインポート
+
+メニューからServer → Data Import → Import from Self-Contained File → 解凍したsample.sql　を指定して Start Import → Import Completedになることを確認
+
+左のSCHEMASの更新ボタンを押し、employeesという名前のスキーマがあればOK
+
+### データを見る
+
+集計・分析・機械学習・AI、何をするにしてもまずはデータを知ることが第一歩
+
+データについて色々調べてみる
+
+どんなテーブルがある？
+
+```
+USE employees;
+SHOW TABLES;
+```
+
+employeesテーブルには何が入っている？
+
+```
+DESC employees;
+```
+
+従業員の数は？（employeesの行数は？）
+
+```
+SELECT COUNT(*) FROM employees;
+```
+
+### 
 
