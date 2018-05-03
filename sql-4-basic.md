@@ -43,13 +43,47 @@ CREATE TABLE user (
 
 ### データを挿入する
 
+文法
+
 ```sql
-INSERT INTO test.user VALUES(1,"Tetsutaro Watanabe","M",35,"1420042");
+INSERT INTO テーブル名 VALUES(値の列挙);
+```
+
+1行挿入
+
+```sql
+INSERT INTO user VALUES(1,"Tetsutaro Watanabe","M",35,"1420042");
+```
+
+もう2行挿入
+
+```sql
+INSERT INTO user VALUES(2,"Taro Yamada","M",30,"1420043");
+INSERT INTO user VALUES(3,"Hanako Suzuki","F",28,"1420050");
+```
+
+idは主キーであり、同じidを持つ行は挿入できない。
+
+```sql
+INSERT INTO user VALUES(3,"Jiro Kato","M",40,"1420060");
+```
+
+```
+Error Code: 1062. Duplicate entry '3' for key 'PRIMARY'
+```
+
+### コメント
+
+```sql
+-- これが1行コメント
 ```
 
 ```sql
-INSERT INTO test.user VALUES(2,"Taro Yamada","M",30,"1420043");
-INSERT INTO test.user VALUES(3,"Hanako Suzuki","F",28,"1420050");
+/*
+これが
+複数行
+コメント
+*/
 ```
 
 ### データを参照する
@@ -137,6 +171,15 @@ DROP TABLE user;
 ### 余談
 ちなみに、「hoge」という言葉はIT関係者が良く使う言葉であり、とりあえず適当な文字列を書きたいときに「hoge」とかく。
 「hoge」の他にも「bar」が良く使われる。
+
+### テーブルの結合
+
+userテーブルの他にzipテーブルも作る
+
+```
+
+```
+
 
 ## 集計の練習
 
