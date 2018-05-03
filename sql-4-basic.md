@@ -138,11 +138,6 @@ WHERE id = 1
 
 ### データを削除する
 
-```sql
-DELETE users 
-WHERE id = 2
-;
-```
 
 ```sql
 DELETE FROM users 
@@ -174,7 +169,7 @@ DROP TABLE users;
 
 ### テーブルの結合
 
-usersテーブルの他にzipテーブルも作る
+usersテーブルの他にzipsテーブルも作る
 
 ```sql
 CREATE TABLE zips (
