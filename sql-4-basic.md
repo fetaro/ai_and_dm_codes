@@ -52,14 +52,14 @@ INSERT INTO テーブル名 VALUES(値の列挙);
 1行挿入
 
 ```sql
-INSERT INTO user VALUES(1,"Tetsutaro Watanabe","M",35,"1420042");
+INSERT INTO user VALUES(1,"Tetsutaro Watanabe","M",35,"1420043");
 ```
 
 もう2行挿入
 
 ```sql
-INSERT INTO user VALUES(2,"Taro Yamada","M",30,"1420013");
-INSERT INTO user VALUES(3,"Hanako Suzuki","F",28,"1420012");
+INSERT INTO user VALUES(2,"Taro Yamada","M",30,"1400013");
+INSERT INTO user VALUES(3,"Hanako Suzuki","F",28,"1400012");
 ```
 
 idは主キーであり、同じidを持つ行は挿入できない。
@@ -163,9 +163,9 @@ DROP TABLE user;
 * 作成したテーブルに以下のデータを挿入せよ。
 
 ```sql
-1,"Tetsutaro Watanabe","M",35,"1420042","fetaro@hoge.com";
-2,"Taro Yamada","M",30,"1420013","yamada@hoge.com";
-3,"Hanako Suzuki","F",28,"1420012","suzuki@hoge.com";
+1,"Tetsutaro Watanabe","M",35,"1420043","fetaro@hoge.com";
+2,"Taro Yamada","M",30,"1400013","yamada@hoge.com";
+3,"Hanako Suzuki","F",28,"1400012","suzuki@hoge.com";
 ```
 
 ### 余談
@@ -186,7 +186,7 @@ CREATE TABLE zips (
 データを入れる
 
 ```sql
-INSERT INTO zips VALUES("1420042","東京都 品川 二葉");
+INSERT INTO zips VALUES("1420043","東京都 品川 二葉");
 INSERT INTO zips VALUES("1400013","東京都 品川区 南大井");
 INSERT INTO zips VALUES("1400004","東京都 品川区 南品川");
 INSERT INTO zips VALUES("1400003","東京都 品川区 八潮");
@@ -198,10 +198,12 @@ INSERT INTO zips VALUES("1420042","東京都 品川区 豊町");
 SELECT * FROM zips;
 ```
 
+userとzipsを結合して表示する
+
 ```sql
 SELECT * FROM user 
 	INNER JOIN zips 
- ON user.zip = zips.zip ;
+	ON user.zip = zips.zip ;
 ```
 
 ## 集計の練習
