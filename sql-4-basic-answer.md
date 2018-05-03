@@ -3,7 +3,7 @@
 テーブルの作成
 
 ```sql
-CREATE TABLE user2 (
+CREATE TABLE users (
   id INT PRIMARY KEY, 
   name VARCHAR(20), 
   gender VARCHAR(1),
@@ -16,15 +16,15 @@ CREATE TABLE user2 (
 データの挿入
 
 ```sql
-INSERT INTO user2 VALUES(1,"Tetsutaro Watanabe","M",35,"1420042","fetaro@hoge.com");
-INSERT INTO user2 VALUES(2,"Taro Yamada","M",30,"1420043","yamada@hoge.com");
-INSERT INTO user2 VALUES(3,"Hanako Suzuki","F",28,"1420050","suzuki@hoge.com");
+INSERT INTO users VALUES(1,"Tetsutaro Watanabe","M",35,"1420043","fetaro@hoge.com");
+INSERT INTO users VALUES(2,"Taro Yamada","M",30,"1400013","yamada@hoge.com");
+INSERT INTO users VALUES(3,"Hanako Suzuki","F",28,"1400012","suzuki@hoge.com");
 ```
 
 データの参照
 
 ```sql
-SELECT * FROM user2;
+SELECT * FROM users;
 ```
 
 ## 演習4-2の答え
