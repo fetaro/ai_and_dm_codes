@@ -204,6 +204,15 @@ SELECT * FROM users
 
 * INNER JOINは両方のテーブルで条件が一致した行のみを表示する
 
+```sql
+SELECT * FROM users
+	LEFT JOIN zips 
+	ON users.zip = zips.zip 
+	;
+```
+
+* LEFT JOINならば左側のテーブル(つまりusers)の行は全部表示する
+
 ## 集計の練習
 
 ### サンプルデータのロード
