@@ -118,6 +118,19 @@ SELECT COUNT(*) FROM users;
 SELECT COUNT(*) FROM users WHERE age < 30;
 ```
 
+比較するときに使える演算子
+
+``` 
+演算子	使用例	意味
+=	a = b	a と b は等しい
+<>	a <> b	a と b は等しくない
+!=	a != b	a と b は等しくない
+<	a < b	a は b よりも小さい
+<=	a <= b	a は b よりも小さいか等しい
+>	a > b	a は b よりも大きい
+>=	a >= b	a は b よりも大きいか等しい
+```
+
 値の最大を取得
 
 ```sql
@@ -163,9 +176,57 @@ DROP TABLE users;
 3,"Hanako Suzuki","F",28,"1400012","suzuki@hoge.com";
 ```
 
-### 余談
-ちなみに、「hoge」という言葉はIT関係者が良く使う言葉であり、とりあえず適当な文字列を書きたいときに「hoge」とかく。
-「hoge」の他にも「bar」が良く使われる。
+## もっと大きいデータで演習
+
+### サンプルデータのロード
+
+データのダウンロード：　https://drive.google.com/uc?authuser=0&id=1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id&export=download
+
+### サンプルデータのインポート
+
+メニューからServer → Data Import → Import from Self-Contained File → 解凍したsample.sql　を指定して Start Import → Import Completedになることを確認
+
+左のSCHEMASの更新ボタンを押し、employeesという名前のスキーマがあればOK
+
+### データの構造を見る
+
+集計・分析・機械学習・AI、何をするにしてもまずはデータを知ることが第一歩。これから使うemployeesテーブル、salariesテーブル、の構造を見てみる。
+
+employeesテーブルの構造を見る
+
+```
+DESC employees;
+```
+
+salariesテーブルの構造を見る
+
+```
+DESC salaries;
+```
+
+#### データの中身を見る
+
+employeesテーブルの中身を10件見る
+
+```
+SELECT * FROM employees LIMIT 10;
+```
+
+salariesテーブルの中身を10件見る
+
+```
+SELECT * FROM salaries LIMIT 10;
+```
+
+### 演習4-2
+
+employeesスキーマにあるデータを見て以下の問いに答えよ。
+
+* 従業員の数は？
+* 従業員の男女の数は？
+* 給料の一番多い人の、給料、社員番号、名前は？
+
+
 
 ### テーブルの結合
 
@@ -214,30 +275,3 @@ SELECT * FROM users
 * LEFT JOINならば左側のテーブル(つまりusers)の行は全部表示する
 
 
-## もっと大きいデータで演習
-
-### サンプルデータのロード
-
-データのダウンロード：　https://drive.google.com/file/d/1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id/view usp=sharing
-
-### サンプルデータのインポート
-
-メニューからServer → Data Import → Import from Self-Contained File → 解凍したsample.sql　を指定して Start Import → Import Completedになることを確認
-
-左のSCHEMASの更新ボタンを押し、employeesという名前のスキーマがあればOK
-
-### データを見る
-
-集計・分析・機械学習・AI、何をするにしてもまずはデータを知ることが第一歩
-
-
-### 演習4-2
-
-employeesスキーマには、とある会社の社員、給与、所属部署の情報が入っている。
-データを見て以下の問いに答えよ。
-
-* 従業員の数は？
-* 従業員の男女の数は？
-* 給料の一番多い人の、給料、社員番号、名前は？
-
-ヒント：従業員はemployeesテーブル、給与はsalariesテーブルにある
