@@ -29,7 +29,7 @@ SELECT * FROM users;
 
 ## 演習4-2の答え
 
-### 従業員の数は？
+#### 従業員の数は？
 
 SQL
 
@@ -44,7 +44,7 @@ SELECT COUNT(*) FROM employees;
 300024
 ```
 
-### 従業員の男女の数は？
+#### 従業員の男女の数は？
 
 SQL
 
@@ -61,7 +61,7 @@ select count(*) from employees where gender = 'F';
 ```
 
 
-### 給料の一番多い人の、給料、社員番号、名前は？
+#### 給料の一番多い人の、給料、社員番号、名前は？
 
 
 一番多い給与
@@ -106,3 +106,16 @@ SELECT first_name, last_name FROM employees WHERE emp_no = 43624;
 'Tokuyasu', 'Pesch'
 ```
 
+#### 2000/1/1 ~ 2000/12/31の間で最も高かった給料は？
+
+SQL
+
+```
+SELECT MAX(salary) FROM salaries WHERE from_date >= '2000-01-01' AND to_date < '2001-01-01' ;
+```
+
+実行結果
+
+```
+145901
+```
