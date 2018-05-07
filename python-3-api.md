@@ -5,19 +5,19 @@
 
 https://openweathermap.org/price にアクセス
 
-![3-0.png](3-0.png)
+![3-0.png](images/3-0.png)
 
 Get API Key and Start をクリック
 
-![3-1.png](3-1.png)
+![3-1.png](images/3-1.png)
 
 University of Tokyoを入力し、教育を選ぶ
 
-![3-2.png](3-2.png)
+![3-2.png](images/3-2.png)
 
 API Keysのタブを開いてKyesの値をメモする
 
-![3-3.png](3-3.png)
+![3-3.png](images/3-3.png)
 
 ## ディクショナリの復習
 
