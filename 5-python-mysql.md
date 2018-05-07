@@ -1,7 +1,7 @@
 
 # PythonからMySQLにデータを挿入する
 
-###　まずやってみよう
+### まずやってみよう
 
 以下のコードを書いて実行
 
@@ -25,14 +25,14 @@ ModuleNotFoundError: No module named 'mysql'
 
 3. mysql-connector-python　を選択して、Applyをクリック
 
-![python-mysql-1.png](python-mysql-1.png)
+![5-1.png](5-1.png)
 
 4. install packagesで以下の画面になった準備完了。Applyをクリック
 
-![python-mysql-2.png](python-mysql-2.png)
+![5-2.png](5-2.png)
 
 5. spyderに戻り`import mysql.connector`が書かれたプログラムを実行し、エラーが出なければOK
 
 ※)以下の様な画面が出た場合は、「Anaconda Navigatorを最新にバージョンアップをしないか？」といってきているので、Noを選択すればOK
 
-![python-mysql-3.png](python-mysql-3.png)
+![5-3.png](5-3.png)
