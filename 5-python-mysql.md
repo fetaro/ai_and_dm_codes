@@ -1,4 +1,4 @@
-
+﻿
 # PythonからMySQLにデータを挿入する
 
 ### まずやってみよう
@@ -33,11 +33,11 @@ ModuleNotFoundError: No module named 'mysql'
 
 install packagesで以下の画面になった準備完了。Applyをクリック
 
-<img src="images/5-2.png" width="200">
+<img src="images/5-2.png" width="300">
 
 ※)以下の様な画面が出た場合は、「Anaconda Navigatorを最新にバージョンアップをしないか？」といってきているので、Noを選択すればOK
 
-<img src="images/5-3.png" width="200">
+<img src="images/5-3.png" width="300">
 
 ### Python-MySQLドライバのインポート
 
@@ -174,3 +174,4 @@ CREATE TABLE forcast(
 ### 演習5-3(時間が余った人)
 
 演習5-2において、時間を表すdtの列はVARCHAR(50)である。これをDATETIME型に変えたテーブルforcast2を作成し、天気予報データを挿入せよ。
+
