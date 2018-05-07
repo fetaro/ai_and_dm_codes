@@ -31,51 +31,78 @@ SELECT * FROM users;
 
 ### 従業員の数は？
 
+SQL
+
 ```sql
 USE employees;
 SELECT COUNT(*) FROM employees;
-'300024'
+```
+
+実行結果
+
+```
+300024
 ```
 
 ### 従業員の男女の数は？
 
+SQL
 
 ```sql
 select count(*) from employees where gender = 'M';
-'179973'
-
 select count(*) from employees where gender = 'F';
-'120051'
+```
+
+実行結果
 
 ```
+179973
+120051
+```
+
 
 ### 給料の一番多い人の、給料、社員番号、名前は？
 
 
 一番多い給与
 
+SQL
+
 ```sql
 select max(salary) from salaries ;
+```
 
-'158220'
+実行結果
 
+```
+158220
 ```
 
 一番給与が多い人の社員番号
 
+SQL
+
 ```sql
 select emp_no from salaries where salary = 158220;
+```
 
-'43624'
+実行結果
 
+```
+43624
 ```
 
 社員の名前
 
+SQL
+
 ```sql
 SELECT first_name, last_name FROM employees WHERE emp_no = 43624;
+```
 
+実行結果
+
+```
 'Tokuyasu', 'Pesch'
-
 ```
 
