@@ -29,10 +29,10 @@ ModuleNotFoundError: No module named 'mysql'
 
 4. install packagesで以下の画面になった準備完了。Applyをクリック
 
-<img src="images/5-2.png" width="200">
+<img src="images/5-2.png" width="300">
 
 5. spyderに戻り`import mysql.connector`が書かれたプログラムを実行し、エラーが出なければOK
 
 ※)以下の様な画面が出た場合は、「Anaconda Navigatorを最新にバージョンアップをしないか？」といってきているので、Noを選択すればOK
 
-<img src="images/5-3.png" width="200">
+<img src="images/5-3.png" width="300">
