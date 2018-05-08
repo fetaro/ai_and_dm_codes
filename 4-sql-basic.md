@@ -182,6 +182,8 @@ DROP TABLE users;
 
 データのダウンロード：　https://drive.google.com/uc?authuser=0&id=1NDDcMcRjjfNiWm42jqPVBRpNAXOzZ4id&export=download
 
+データのダウンロード（非zip):https://drive.google.com/open?id=1sVwRhenUihqC2e4HtiYvMQRYC_xiieZc
+
 ### サンプルデータのインポート
 
 メニューからServer → Data Import → Import from Self-Contained File → 解凍したsample.sql　を指定して Start Import → Import Completedになることを確認
