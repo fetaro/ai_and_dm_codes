@@ -6,9 +6,9 @@
 
 以下のCSVファイルをダウンロードする
 
-* [hotel.csv](data/hotel.csv)
-* [reserve.csv](data/reserve.csv)
-* [customer.csv](data/customer.csv)
+* [hotel.csv](https://raw.githubusercontent.com/fetaro/ai_and_dm_codes/master/data/hotel.csv)
+* [reserve.csv](https://raw.githubusercontent.com/fetaro/ai_and_dm_codes/master/data/reserve.csv)
+* [customer.csv](https://raw.githubusercontent.com/fetaro/ai_and_dm_codes/master/data/customer.csv)
 
 注意！ダウンロードしたファイルは、日本語を含まないパスに配置すること。
 
