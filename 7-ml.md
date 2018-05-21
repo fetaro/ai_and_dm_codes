@@ -1,6 +1,135 @@
 # 教師付き機械学習(回帰)
 
+## numpyの基礎
+
+```python
+import numpy as np
+
+# ベクトルの定義
+a = np.array([1,2,3])
+print(a)
+
+b = np.array([4,5,6])
+print(b)
+
+# 要素同士の和
+print(a + b)
+
+# 要素同士の積
+print(a * b)
+
+# 要素と数値の和
+print(a + 5)
+
+# 要素と数値の積
+print(a * 5)
+
+# 要素の2乗
+print(a ** 2)
+
+
+# 各要素の平均値
+print(np.mean(a))
+
+# 平均二乗誤差の計算
+
+# 実測値
+T = np.array([1,2,4,7,10,11])
+
+# 推定値
+X = np.array([0,1,2,3,4,5])
+
+# モデルの係数
+w0 = 2
+w1 = 1
+
+Y = w0 * X + w1
+print(Y)
+
+mse = np.mean((Y-T)**2)
+
+print(mse)
+
+# その他
+# 要素の絶対値
+np.absolute([-4,3])
+```
+
 ## 1次元
+
+```python
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# %matplotlib inline
+
+X_min = 4
+X_max = 30
+
+def generate_data():
+    np.random.seed(seed=1)
+    X_n = 16
+    X = 5 + 25 * np.random.rand(X_n)
+    Prm_c = [170,108,0.2]
+    T = Prm_c[0] - Prm_c[1] * np.exp(-Prm_c[2] * X) + 4 * np.random.randn(X_n)
+    print(X)
+    np.savez('ch5_data.npz',X=X, X_min=X_min, X_max=X_max ,X_n=X_n ,T=T)# -*- coding: utf-8 -*-
+    return X,T
+
+def show_data(X,T):
+    plt.figure(figsize=(4,4))
+    plt.plot(X,T,marker='o',linestyle='None',markeredgecolor='black',color='cornflowerblue')
+    plt.xlim(X_min, X_max)
+    plt.grid(True)
+    plt.show()
+
+def show_data_and_line(X,T,W):
+    plt.figure(figsize=(4,4))
+    xb = np.linspace(X_min,X_max,100)
+    y = W[0] * xb + W[1]
+    plt.plot(xb,y,color=(.5,.5,.5), linewidth=4)
+    plt.plot(X,T,marker='o',linestyle='None',markeredgecolor='black',color='cornflowerblue')
+    plt.xlim(X_min, X_max)
+    plt.grid(True)    
+    plt.show()
+
+
+
+#　勾配法
+def fit_line_num(X,T,w0_init,w1_init):
+    alpha = 0.001 #学習率
+    eps = 0.1 #繰り返しをやめる絶対値に閾値
+    w0 = w0_init
+    w1 = w1_init
+    for i in range(1,1000000):
+        Y = w0 * X + w1
+        # w0の傾き
+        d_w0 = 2 * np.mean((Y-T)*X)
+        # w1の傾き
+        d_w1 = 2 * np.mean(Y-T)
+        # 勾配に沿ってちょっと動く
+        w0 = w0 - alpha * d_w0
+        w1 = w1 - alpha * d_w1
+        if max(np.absolute([d_w0,d_w1])) < eps:
+            break
+    return w0,w1
+
+X,T = generate_data()
+show_data(X,T)
+
+
+w0_init = 10.0
+w1_init = 165.0 #初期化パラメータ
+W0,W1 = fit_line_num(X,T,w0_init,w1_init)
+
+print(W0,W1)
+
+#plt.figure(figsize=(4,4))
+W=np.array([W0,W1])
+show_data_and_line(X,T,W)
+```
 
 ```python
 import numpy as np
