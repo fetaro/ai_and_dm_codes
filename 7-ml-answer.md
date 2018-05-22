@@ -25,3 +25,11 @@ print(np.mean((Y-T) ** 2))
 
     1.5714285714285714
 
+
+## 演習7-3の答え
+
+```
+def dmse_line_w1(X,T,w0,w1):
+    Y = w0 * X + w1
+    return 2 * np.mean(Y-T)
+```
