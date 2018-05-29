@@ -253,13 +253,17 @@ def dcee_logistic(w,x,t):
 #　今回は科学技術計算ライブラリscipyを利用する
 import scipy.optimize
 
+
 W_init = [1,-1]
 result = scipy.optimize.minimize(cee_logistic,W_init,args=(X,T),jac=dcee_logistic,method="CG")
-#print(result)
-#print(result.x)
 
-
-show_data_and_sigmoid(X,T,result.x)
+# 結果表示
+W=result.x
+show_data_and_sigmoid(X,T,W)
+print("--result-------")
+print(result)
+print("----------------")
+print("求めたモデルは1/(1 + np.exp(-({0} * x + w{1})) )".format(W[0],W[1]))
 
 ```
 
@@ -278,4 +282,18 @@ show_data_and_sigmoid(X,T,result.x)
 
 
 ![png](output_5_2.png)
+
+
+    --result-------
+         fun: 0.25104463379423897
+         jac: array([ 4.28508972e-06, -1.59777280e-07])
+     message: 'Optimization terminated successfully.'
+        nfev: 36
+         nit: 12
+        njev: 36
+      status: 0
+     success: True
+           x: array([ 8.17647664, -9.3822462 ])
+    ----------------
+    求めたモデルは1/(1 + np.exp(-(8.176476643963325 * x + w-9.38224620184623)) )
 
