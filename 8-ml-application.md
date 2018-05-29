@@ -161,7 +161,7 @@ show_data2(X0,X1,T)
 
 ```python
 # 平均誤差関数の偏微分
-# return値は重みの配列[w0,w1]
+# return値は重みの配列[w0,w1,w2]
 def dmse_plane(X0,X1,T,W):
    ★ココを記載する★
 
@@ -310,6 +310,7 @@ print(cee_logistic([1,1],X,T))
 
 ```python
 # 平均交差エントロピー誤差の微分
+# return値は重みの配列[w0,w1]
 def dcee_logistic(w,x,t):
     y = logistic(x,w)
     ★ココを記載する★
