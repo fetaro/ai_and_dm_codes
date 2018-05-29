@@ -310,13 +310,15 @@ print(cee_logistic([1,1],X,T))
 # 平均交差エントロピー誤差の微分
 def dcee_logistic(w,x,t):
     y = logistic(x,w)
-    d_W = np.zeros(2)
-    d_W[0] = np.mean((y-t)*x)
-    d_W[1] = np.mean(y-t)
-    return d_W
+    ★ココを記載する★
 
 print(dcee_logistic([1,1],X,T))
 ```
+
+
+    [0.30857905 0.39485474]
+
+
 
 ## 勾配法による解
 
@@ -336,9 +338,6 @@ print("----------------")
 print("求めたモデルは1/(1 + np.exp(-({0} * x + w{1})) )".format(W[0],W[1]))
 
 ```
-
-    [0.30857905 0.39485474]
-
 
 
 ![png](output_14_1.png)
