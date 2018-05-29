@@ -204,6 +204,7 @@ show_data2_and_plane(X0,X1,T,W[0],W[1],W[2])
 
 # 教師あり機械学習：分類
 
+## データロード
 
 ```python
 # -*- coding: utf-8 -*-
@@ -303,6 +304,7 @@ print(cee_logistic([1,1],X,T))
     1.0288191541851066
 
 
+## 平均交差エントロピー誤差の微分
 
 ```python
 # 平均交差エントロピー誤差の微分
@@ -314,8 +316,11 @@ def dcee_logistic(w,x,t):
     return d_W
 
 print(dcee_logistic([1,1],X,T))
+```
 
-# 勾配法による解
+## 勾配法による解
+
+```python
 #　今回は科学技術計算ライブラリscipyを利用する
 import scipy.optimize
 
@@ -329,8 +334,6 @@ print("--result-------")
 print(result)
 print("----------------")
 print("求めたモデルは1/(1 + np.exp(-({0} * x + w{1})) )".format(W[0],W[1]))
-
-
 
 ```
 
