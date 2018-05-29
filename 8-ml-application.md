@@ -59,6 +59,7 @@ def load_data(seed=1):
     return X,T
 
 # 誤差関数の偏微分
+# return値は重みの配列[w0,w1]
 def dmse_line(X,T,W):
     ★ココを記述する★
 
@@ -160,6 +161,7 @@ show_data2(X0,X1,T)
 
 ```python
 # 平均誤差関数の偏微分
+# return値は重みの配列[w0,w1]
 def dmse_plane(X0,X1,T,W):
    ★ココを記載する★
 
