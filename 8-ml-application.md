@@ -32,6 +32,67 @@ print(c)
     4
     6
 
+
+## 教師あり機械学習：回帰 1次元入力モデル（復習)
+
+```python
+# -*- coding: utf-8 -*-
+import numpy as np
+
+X_MIN = 4
+X_MAX = 30
+
+# データを生成して、返却する
+def load_data(seed=1):
+    np.random.seed(seed)
+    X_n = 16
+    X = 5 + 25 * np.random.rand(X_n)
+    Prm_c = [170,108,0.2]
+    T = Prm_c[0] - Prm_c[1] * np.exp(-Prm_c[2] * X) + 4 * np.random.randn(X_n)
+    return X,T
+
+# w0で偏微分して、勾配を返却する関数
+def dmse_line_w0(X,T,w0,w1):
+    Y = w0 * X + w1
+    return 2 * np.mean((Y-T)*X)
+
+# w1で偏微分して、勾配を返却する関数
+def dmse_line_w1(X,T,w0,w1):
+    Y = w0 * X + w1
+    return 2 * np.mean(Y-T)
+
+
+# 勾配法
+def fit_line_num(X,T,w0_init,w1_init):
+    alpha = 0.001 #学習率。どれくらいちょっとづつ探索するか
+    eps = 0.1     #学習の繰り返しをやめる閾値
+    #探索を開始する初期値
+    w0 = w0_init
+    w1 = w1_init
+    for i in range(1,1000000):
+        # 偏微分して勾配を求める
+        d_w0 = dmse_line_w0(X,T,w0,w1)
+        d_w1 = dmse_line_w1(X,T,w0,w1)
+        # 勾配のほうにちょっと動く
+        w0 = w0 - alpha * d_w0
+        w1 = w1 - alpha * d_w1
+        # 傾きの絶対値の最大値が、しきい値より小さい場合は、終了する
+        if max(np.absolute([d_w0,d_w1])) < eps:
+            break
+    return w0,w1
+
+X,T = load_data()
+
+# 勾配法により、勾配が十分に小さくなるw0,w1を求める
+w0,w1 = fit_line_num(X,T,10.0,165.0)
+
+print("求めたモデルは t={0} * x + {1}".format(w0,w1))
+```
+
+```
+求めたモデルは t=1.5399473562672923 * x + 136.1761603274906
+```
+
 ## 教師あり機械学習：回帰 1次元入力モデルの改良版
 
 前回のプログラムは重みをw0,w1と２つの変数を用いて表現していた。
